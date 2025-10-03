@@ -15,10 +15,10 @@ public class Cafe {
             File file = new File("coffees.txt");
             Scanner scan = new Scanner(file);
 
-            while(scan.hasNextLine()) {
-             coffeeMenu.add(scan.nextLine());
+            while(scan.hasNextLine()) { //betingelse
+             coffeeMenu.add(scan.nextLine()); //counter
             }
-        } catch (FileNotFoundException e) {
+            } catch (FileNotFoundException e) {
             System.out.println("File not found. Check path and filename");
 
 

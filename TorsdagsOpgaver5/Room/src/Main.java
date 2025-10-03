@@ -38,6 +38,7 @@ public class Main {
     public static int countRoomsInBuilding(Building building){
         return building.getRooms().size();
 
+      //  private static int monsterCount(Building building, )
     }
 
 
