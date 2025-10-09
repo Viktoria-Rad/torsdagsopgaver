@@ -7,22 +7,22 @@ public class Cafe {
 
     private ArrayList<String> coffeeMenu = new ArrayList<>();
 
-    public ArrayList<String> getCoffeeMenu(){
+    public ArrayList<String> getCoffeeMenu() {
         return coffeeMenu;
     }
-    public void loadMenuData(){
+
+    public void loadMenuData() {
         try {
             File file = new File("coffees.txt");
             Scanner scan = new Scanner(file);
 
-            while(scan.hasNextLine()) { //betingelse
-             coffeeMenu.add(scan.nextLine()); //counter
+            while (scan.hasNextLine()) { //betingelse
+                coffeeMenu.add(scan.nextLine()); //counter
             }
-            } catch (FileNotFoundException e) {
+        } catch (FileNotFoundException e) {
             System.out.println("File not found. Check path and filename");
-
-
-
+        } finally {
+            System.out.println("finaly");
         }
     }
 }
